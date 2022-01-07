@@ -25,9 +25,11 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import RootNavigation from './src/navigation/RootNavigation';
 
 /**import RootNavigation here */
-import RootNavigation from './src/assets/navigation/RootNavigation';
+// import RootNavigation from './src/navigation/RootNavigation';
+import RootNavigation from './src/navigation/RootNavigation';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
