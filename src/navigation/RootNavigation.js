@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import SplashScreen from '../screens/SplashScreen';
+import SplashScreen from '../screens/SplashScreen/SplashScreen';
 
 function RootNavigation() {
   return (
     <View>
-      <Text>Navigation</Text>
+      <SplashScreen />
     </View>
   );
 }
