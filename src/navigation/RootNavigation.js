@@ -1,12 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import SplashScreen from '../screens/SplashScreen/SplashScreen';
+import {View,  Image, Text} from 'react-native';
+import NewsDescription from '../screens/NewsDescription/NewsDescription';
 
 function RootNavigation() {
   return (
     <View>
-      <SplashScreen />
-    </View>
+      <NewsDescription/>
+      {/* <Text>hii</Text>  */}
+      </View>
   );
 }
 
