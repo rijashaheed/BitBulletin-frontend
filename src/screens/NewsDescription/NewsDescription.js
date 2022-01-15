@@ -10,7 +10,7 @@ const NewsDescription = () => {
       </View>
       <View>
         <Image
-          source={{uri: images.news}}
+          source={images.news}
           // eslint-disable-next-line react-native/no-inline-styles
           style={{width: 250, height: 250}}
         />
