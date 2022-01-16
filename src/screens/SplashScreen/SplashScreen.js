@@ -1,12 +1,20 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+import React, {Component} from 'react';
+import {Image, View} from 'react-native';
+import {images} from '../../resources/images';
+import styles from './Style';
 
-function SplashScreen() {
-  return (
-    <View>
-      <Text>SplashScreen</Text>
-    </View>
-  );
+export default class SplashScreen extends Component {
+  render() {
+    const {navigation} = this.props;
+
+    setTimeout(() => {
+      navigation.replace('HomeScreen');
+    }, 2000);
+
+    return (
+      <View style={styles.container}>
+        <Image style={styles.image} resizeMode="contain" source={images.logo} />
+      </View>
+    );
+  }
 }
-
-export default SplashScreen;
