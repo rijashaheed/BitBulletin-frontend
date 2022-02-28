@@ -2,8 +2,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
-import NewsList from '../screens/NewsList/NewsList';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import NewsList from '../screens/NewsList/NewsList';
 
 const Stack = createStackNavigator();
 
