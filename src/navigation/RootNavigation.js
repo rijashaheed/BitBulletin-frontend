@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import NewsList from '../screens/NewsList/NewsList';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function RootNavigation() {
         initialRouteName="SplashScreen">
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="NewsList" component={NewsList} />
       </Stack.Navigator>
     </NavigationContainer>
   );
