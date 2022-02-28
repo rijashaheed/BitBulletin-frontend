@@ -1,9 +1,11 @@
 import {StyleSheet} from 'react-native';
 import {RFPercentage} from 'react-native-responsive-fontsize';
+import {colors} from '../../resources/colors';
 
 export default StyleSheet.create({
   safeArea: {
     flex: 1,
+    backgroundColor: colors.white,
   },
 
   text: {
@@ -14,6 +16,7 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: colors.background,
   },
 
   image: {

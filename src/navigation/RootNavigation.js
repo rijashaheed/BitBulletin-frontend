@@ -1,15 +1,26 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import NewsList from '../screens/NewsList/NewsList';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
 
-function RootNavigation() {
+const Stack = createStackNavigator();
+
+const screenOptions = {
+  headerShown: false,
+};
+
+export default function RootNavigation() {
   return (
-    <View>
-      {/* <SplashScreen /> */}
-      <NewsList />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={screenOptions}
+        initialRouteName="SplashScreen">
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="NewsList" component={NewsList} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-export default RootNavigation;
