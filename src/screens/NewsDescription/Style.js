@@ -11,15 +11,21 @@ export default StyleSheet.create({
 	heading: {
 	  margin: 12,
 	  marginHorizontal: 16,
+	  color: colors.black,
 	},
 	author: {
 		margin: 1,
 		marginHorizontal: 16,
 	},
 	content: {
+		color: colors.black,
 		margin: 20,
-		marginHorizontal: 16,
-	  },
+		marginHorizontal: 15,
+		textAlign: "justify",
+		alignContent: "center",
+		
+
+		  },
 	  time:{
 		marginBottom: 20,
 		marginBottom: 0.5,
@@ -30,11 +36,11 @@ export default StyleSheet.create({
 	  height: 250,
 	  justifyContent: 'center',
 	  alignItems: 'center',
-	  opacity: 0.3,
+	//   opacity: 0.3,
 	},
 	button:{
-		color: 'white',
-		backgroundColor: '#D41515',
+		color: colors.white,
+		backgroundColor: colors.red,
 		marginTop: 5,
 		marginBottom: 5,
 		margin: 85,
@@ -43,9 +49,15 @@ export default StyleSheet.create({
 		position: "relative",
 		justifyContent: "center",
 		alignItems: "center",
+		borderColor: colors.red,
+		fontWeight: "bold",
+		borderRadius: 3,
 	},
 	icon:{
-		color: '#D41515',
+		color: colors.red,
 		margin: 5 
+	},
+	contentBox:{
+		minHeight: "40%",
 	}
   });

@@ -2,17 +2,13 @@ import React from 'react';
 import {Text, Image, View, StyleSheet, Button,Pressable,Linking} from 'react-native';
 import {images} from '../../resources/images';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from './Style';
 
-const NewsDescription = () => {
+const NewsDescription = ({navigation}) => {
   return (
     <>
-    <View>
-      <Icon name ="arrow-left" size={20}
-      style={styles.icon}
-      >
-      </Icon>
-    </View>
       <View >
         <Image
           style={styles.stretch}
@@ -27,7 +23,7 @@ const NewsDescription = () => {
         <Text style={[styles.author]}>Ali Ahmed | Dawn.com</Text>
         <Text style={[styles.time]}>Updated 38 minutes ago</Text>
       </View>
-      <View>
+      <View style={styles.contentBox}>
         <Text style={[styles.content]}>The World Health Organisation has said that UN-backed programme shipping coronavirus vaccines to many poor countries has now delivered 1 billion doses, but that milestone is only a reminder of the work that remains after hoarding and stockpiling in rich countries, AP reports.
 A shipment of 1.1 million Covid-19 vaccine doses to Rwanda on Saturday included the billionth dose supplied via the Covax programme. The World Health Organisation has said that UN-backed programme shipping coronavirus vaccines to many poor countries has now delivered 1 billion doses, but that milestone is only a reminder of the work that remains after hoarding and stockpiling in rich countries, AP reports.
 </Text>
