@@ -4,12 +4,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import NewsList from '../screens/NewsList/NewsList';
+import NewsDescription from '../screens/NewsDescription/NewsDescription';
 
-const Stack = createStackNavigator();
-
-const screenOptions = {
-  headerShown: false,
-};
 
 export default function RootNavigation() {
   return (
@@ -20,6 +16,7 @@ export default function RootNavigation() {
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="NewsList" component={NewsList} />
+        <Stack.Screen name="NewsDescription" component={NewsDescription} />
       </Stack.Navigator>
     </NavigationContainer>
   );

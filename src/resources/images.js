@@ -1,5 +1,7 @@
 module.exports.images = {
   logo: require('../assets/logo.jpeg'),
+  news: require('../assets/news.jpg'),
+  coronavirus: require('../assets/coronavirus.jpg'),
   newsList: {
     image1:
       'https://www.thenews.com.pk/assets/uploads/updates/2021-04-21/823844_8820289_Karachi-lockdown-AFP_updates.jpg',
