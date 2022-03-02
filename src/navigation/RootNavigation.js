@@ -1,17 +1,23 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
-import NewsDescription from '../screens/NewsDescription/NewsDescription';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import NewsList from '../screens/NewsList/NewsList';
+import NewsDescription from '../screens/NewsDescription/NewsDescription';
 
 
 export default function RootNavigation() {
   return (
-    <View>
-      <NewsDescription />
-      {/* <Text>hii</Text>  */}
-    </View>
-    
- );
-    }
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={screenOptions}
+        initialRouteName="SplashScreen">
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="NewsList" component={NewsList} />
+        <Stack.Screen name="NewsDescription" component={NewsDescription} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
