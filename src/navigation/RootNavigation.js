@@ -6,6 +6,11 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import NewsList from '../screens/NewsList/NewsList';
 import NewsDescription from '../screens/NewsDescription/NewsDescription';
 
+const Stack = createStackNavigator();
+
+const screenOptions = {
+  headerShown: false,
+};
 
 export default function RootNavigation() {
   return (
