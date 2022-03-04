@@ -8,7 +8,7 @@ function NewsList(props) {
   const { route } = props;
   const { categoryTitle } = route.params
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <Text style={styles.categoryTitle}>{categoryTitle}</Text>
       <FlatList
         data={strings.newsList.list}
