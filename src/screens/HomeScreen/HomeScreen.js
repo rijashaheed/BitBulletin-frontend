@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
 import { Text, View, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import { RFValue, RFPercentage } from 'react-native-responsive-fontsize';
 import { images } from '../../resources/images'
 import Search from './Search'
 import styles from './Style'
 
 const data = [
   {
-    id: 1,
+    id: 0,
     title: 'Sports',
     icon: <Image source={images.sports} style={styles.icon} />,
   },
   {
-    id: 2,
+    id: 1,
     title: 'Business',
     icon: <Image source={images.business} style={styles.icon} />
   },
   {
-    id: 3,
+    id: 2,
     title: 'Tech',
     icon: <Image source={images.tech} style={styles.icon} />
   },
