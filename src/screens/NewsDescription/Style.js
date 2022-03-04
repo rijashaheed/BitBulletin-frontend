@@ -1,17 +1,17 @@
-import {StyleSheet} from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
-import {colors} from '../../resources/colors';
+import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
+import { colors } from '../../resources/colors';
 
 
 export default StyleSheet.create({
 	fonts: {
-	  fontSize: 20,
-	  fontWeight: 'bold'
+		fontSize: 20,
+		fontWeight: 'bold'
 	},
 	heading: {
-	  margin: 12,
-	  marginHorizontal: 16,
-	  color: colors.black,
+		margin: 12,
+		marginHorizontal: 16,
+		color: colors.black,
 	},
 	author: {
 		margin: 1,
@@ -23,22 +23,21 @@ export default StyleSheet.create({
 		marginHorizontal: 15,
 		textAlign: "justify",
 		alignContent: "center",
-		
 
-		  },
-	  time:{
+
+	},
+	time: {
 		marginBottom: 20,
 		marginBottom: 0.5,
 		marginHorizontal: 16
 	},
 	stretch: {
-	  width: 400,
-	  height: 250,
-	  justifyContent: 'center',
-	  alignItems: 'center',
-	//   opacity: 0.3,
+		width: '100%',
+		height: 200,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
-	button:{
+	button: {
 		color: colors.white,
 		backgroundColor: colors.red,
 		marginTop: 5,
@@ -53,11 +52,11 @@ export default StyleSheet.create({
 		fontWeight: "bold",
 		borderRadius: 3,
 	},
-	icon:{
+	icon: {
 		color: colors.red,
-		margin: 5 
+		margin: 5
 	},
-	contentBox:{
+	contentBox: {
 		minHeight: "40%",
 	}
-  });
+});
