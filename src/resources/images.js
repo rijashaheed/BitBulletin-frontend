@@ -13,4 +13,7 @@ module.exports.images = {
       'https://www.arabnews.pk/sites/default/files/styles/n_670_395/public/2020/01/04/1913771-1012486452.jpg?itok=q335w0r6',
     image5: 'https://i.dawn.com/medium/2022/01/61df9470cba9c.png',
   },
+  business: require('../assets/business.jpeg'),
+  sports: require('../assets/sports.jpg'),
+  tech: require('../assets/tech.jpeg')
 };
