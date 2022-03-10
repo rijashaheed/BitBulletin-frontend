@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
   overlay: {
@@ -8,8 +9,10 @@ export default StyleSheet.create({
     flex: 1,
   },
   coverImage: {
-    width: '100%',
-    height: 200,
+    width: wp('100%'),
+    height: hp('20%'),
+    // width: '100%',
+    // height: 200,
   },
   textView: {
     position: 'absolute',

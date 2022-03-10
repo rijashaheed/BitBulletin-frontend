@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
   safeArea: {
@@ -18,6 +18,6 @@ export default StyleSheet.create({
 
   image: {
     flex: 1,
-    width: RFPercentage(65),
+    width: wp('100%'),
   },
 });

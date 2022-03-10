@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { RFPercentage } from 'react-native-responsive-fontsize';
-import { RFValue } from 'react-native-responsive-fontsize';
+// import { RFPercentage } from 'react-native-responsive-fontsize';
+// import { RFValue } from 'react-native-responsive-fontsize';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { colors } from '../../resources/colors';
 
 export default StyleSheet.create({
@@ -34,9 +35,11 @@ export default StyleSheet.create({
   categoryTitle: {
     fontWeight: 'bold',
     color: colors.black,
-    fontSize: RFValue(15),
+    // fontSize: RFValue(15),
+    fontSize: wp('5%'),    
     fontWeight: 'bold',
-    padding: RFValue(5),
+    // padding: RFValue(5),
+    padding: wp('1%'),
     opacity: 0.8,
     textAlign: 'center',
   },
@@ -55,14 +58,17 @@ export default StyleSheet.create({
 
   icon: {
     flex: 1,
-    width: RFPercentage(20),
-    height: RFPercentage(20),
+    // width: RFPercentage(20),
+    width: wp('50%'),
+    // height: RFPercentage(20),
+    height: hp('20%'),
   },
 
 
   searchInnerContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    margin: RFValue(10),
+    // margin: RFValue(10)
+    margin: wp('2%'),
   },
 });

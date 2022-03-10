@@ -1,5 +1,5 @@
 module.exports.images = {
-  logo: require('../assets/logo.jpeg'),
+  logo: require('../assets/logo.png'),
   news: require('../assets/news.jpg'),
   coronavirus: require('../assets/coronavirus.jpg'),
   newsList: {
