@@ -1,7 +1,7 @@
 module.exports.colors = {
   white: '#ffffff',
   black: '#000000',
-  red: '#D41515',
+  red: '#8a0a0f',
   darkBlue: '#5b5d62',
   lightGray: '#999999',
   lightGray2: '#171616',

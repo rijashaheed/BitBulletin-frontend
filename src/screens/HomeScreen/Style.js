@@ -44,7 +44,7 @@ export default StyleSheet.create({
 
   categoryImage: {
     flex: 1,
-    shadowColor: "red",
+    shadowColor: colors.red,
     shadowOffset: {
       width: 0,
       height: 6,

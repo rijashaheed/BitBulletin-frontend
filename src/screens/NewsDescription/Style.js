@@ -20,12 +20,12 @@ export default StyleSheet.create({
 		fontWeight: 'bold',
 		color: colors.black,
 	},
-
+	
 	newsMetadata: {
 		padding: wp('1%'),
 		paddingBottom: wp('2%'),
 	},
-
+	
 	metaData: {
 		flexDirection: 'row',
 	},
@@ -46,11 +46,11 @@ export default StyleSheet.create({
 		color: colors.black,
 		textAlign: "justify",
 	},
-
+	
 	button: {
 		marginHorizontal: wp('20%'),
 		padding: wp('2%'),
 		paddingBottom: wp('5%'),
 	},
-
+	
 });

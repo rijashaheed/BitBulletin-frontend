@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { View, ImageBackground, Text, TouchableOpacity } from 'react-native';
 import style from './Style';
+import { colors } from '../../resources/colors';
 
 function NewsCard({ news }) {
   const navigation = useNavigation();
@@ -17,7 +18,7 @@ function NewsCard({ news }) {
             style={style.coverImage}
             source={news.image}
             // eslint-disable-next-line react-native/no-inline-styles
-            imageStyle={{ opacity: 0.9, backgroundColor: 'red' }}>
+            imageStyle={{ opacity: 0.9, backgroundColor: colors.red }}>
             <View style={style.textView}>
               <Text style={style.imageTextHead}>{news.title}</Text>
               <Text style={style.imageTextTime}>Updated {news.time} ago</Text>

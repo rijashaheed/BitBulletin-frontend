@@ -12,7 +12,6 @@ const NewsDescription = (props) => {
         style={styles.newsImage}
         source={newsImage}
       />
-
       <View style={styles.newsBox}>
         <Text style={[styles.newsTitle]}>{newsTitle}</Text>
         <View style={styles.newsMetadata}>
@@ -30,8 +29,9 @@ const NewsDescription = (props) => {
       <View style={[styles.button]}>
         <Button
           title='Read Full Article'
-          color={colors.red} 
-          onPress={() => Linking.openURL('https://www.dawn.com/')} />
+          color={colors.red}
+          onPress={() => Linking.openURL('https://www.dawn.com/')}
+        />
       </View>
     </ScrollView>
   );
