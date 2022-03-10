@@ -36,6 +36,7 @@ export default StyleSheet.create({
   },
 
   imageTextHead: {
+    fontFamily: 'Merriweather-Black',
     fontSize: wp('4%'),
     color: colors.white,
     fontWeight: 'bold',

@@ -19,9 +19,22 @@ export default function RootNavigation() {
       <Stack.Navigator
         screenOptions={screenOptions}
         initialRouteName="SplashScreen">
-        <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="NewsList" component={NewsList}
+
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="NewsList"
+          component={NewsList}
           options={({ route }) => ({
             title: route.params.categoryTitle,
             headerStyle: {
@@ -33,15 +46,18 @@ export default function RootNavigation() {
             headerTintColor: colors.white
           })}
         />
-        <Stack.Screen name="NewsDescription" component={NewsDescription}
+
+        <Stack.Screen
+          name="NewsDescription"
+          component={NewsDescription}
           options={{
             title: '',
             headerStyle: {
               backgroundColor: colors.red,
             },
-
             headerTintColor: colors.white
-          }} />
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
