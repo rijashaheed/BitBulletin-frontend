@@ -1,7 +1,21 @@
 import {StyleSheet} from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+// import { StyleSheet } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import { colors } from '../../resources/colors';
 
 export default StyleSheet.create({
+  categoryTitle: {
+    backgroundColor: colors.red,
+    opacity: 0.8,
+    padding: RFValue(20),
+    textAlign: 'center',
+    fontSize: RFValue(30),
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    color: colors.white
+  },
+
   overlay: {
     background: 'rgba(0, 0, 0, 0.5)',
   },
