@@ -7,4 +7,5 @@ module.exports.colors = {
   lightGray2: '#171616',
   darkGray: '#252425',
   Gray80: '#cccccc',
+  background: '#00000087',
 };

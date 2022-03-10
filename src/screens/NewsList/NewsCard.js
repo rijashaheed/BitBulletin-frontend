@@ -20,7 +20,7 @@ function NewsCard({ news }) {
             imageStyle={{ opacity: 0.9, backgroundColor: 'red' }}>
             <View style={style.textView}>
               <Text style={style.imageTextHead}>{news.title}</Text>
-              <Text style={style.imageTextTime}>updated {news.time} ago</Text>
+              <Text style={style.imageTextTime}>Updated {news.time} ago</Text>
             </View>
           </ImageBackground>
         </View>

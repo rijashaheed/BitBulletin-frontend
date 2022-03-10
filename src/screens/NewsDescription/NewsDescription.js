@@ -1,43 +1,39 @@
 import React from 'react';
-import { Text, Image, View, StyleSheet, Button, Pressable, Linking } from 'react-native';
-import { images } from '../../resources/images';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Text, Image, View, Button, Linking, ScrollView } from 'react-native';
+import { colors } from '../../resources/colors';
 import styles from './Style';
 
 const NewsDescription = (props) => {
   const { route } = props;
   const { newsTitle, newsTime, newsAuthor, newsSource, newsImage, newsContent } = route.params
   return (
-    <>
-      <View>
-        <Image
-          style={styles.stretch}
-          source={newsImage}
-        />
-      </View>
-      <View>
-        <Text style={[styles.fonts, styles.heading]}>{newsTitle}</Text>
-      </View>
-      <View>
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={[styles.author]}>{newsAuthor}</Text>
-          <Text style={[styles.author]}>|</Text>
-          <Text style={[styles.author]}>{newsSource}</Text>
+    <ScrollView>
+      <Image
+        style={styles.newsImage}
+        source={newsImage}
+      />
+
+      <View style={styles.newsBox}>
+        <Text style={[styles.newsTitle]}>{newsTitle}</Text>
+        <View style={styles.newsMetadata}>
+          <View style={styles.metaData}>
+            <Text style={[styles.text]}>{newsAuthor}</Text>
+            <Text style={[styles.text]}>|</Text>
+            <Text style={[styles.text]}>{newsSource}</Text>
+          </View>
+          <Text style={[styles.newsTime]}>Updated {newsTime} ago</Text>
         </View>
-        <Text style={[styles.time]}>Updated {newsTime} ago</Text>
-      </View>
-      <View style={styles.contentBox}>
-        <Text style={[styles.content]}>{newsContent}</Text>
+        <View style={styles.contentBox}>
+          <Text style={[styles.newsContent]}>{newsContent}</Text>
+        </View>
       </View>
       <View style={[styles.button]}>
-        <Pressable
-          onPress={() => Linking.openURL('https://www.dawn.com/')}>
-          <Text style={[styles.button]}>Read More</Text>
-        </Pressable>
+        <Button
+          title='Read Full Article'
+          color={colors.red} 
+          onPress={() => Linking.openURL('https://www.dawn.com/')} />
       </View>
-    </>
+    </ScrollView>
   );
 };
 export default NewsDescription;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchBar } from 'react-native-elements';
 import { View } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
+// import { RFValue } from 'react-native-responsive-fontsize';
 import styles from './Style'
 
 export default function Search(props) {
@@ -15,7 +15,9 @@ export default function Search(props) {
           width: '90%',
           borderRadius: 10,
         }}
-        searchIcon={{ color: 'black', size: RFValue(20) }}
+        searchIcon={{ color: 'black', 
+        // size: RFValue(20)
+         }}
         placeholderTextColor={'black'}
         placeholder={'Search'}
         onChangeText={onChangeText}
