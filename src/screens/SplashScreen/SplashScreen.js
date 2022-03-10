@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Image, ImageBackground, View } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import { images } from '../../resources/images';
 import styles from './Style';
 
@@ -12,11 +13,13 @@ export default class SplashScreen extends Component {
     }, 2000);
 
     return (
-      <ImageBackground
-        style={styles.image}
-        source={images.logo}
-        resizeMode="contain"
-      />
+      <LinearGradient colors={['#ffffff', '#8a0a0f']}>
+        <ImageBackground
+          style={styles.image}
+          source={images.logo}
+          resizeMode="contain"
+        />
+      </LinearGradient>
     );
   }
 }
