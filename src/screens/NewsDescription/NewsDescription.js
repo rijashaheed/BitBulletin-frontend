@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, Image, View, Button, Linking, ScrollView } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import { colors } from '../../resources/colors';
 import styles from './Style';
 
