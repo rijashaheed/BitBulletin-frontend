@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Image, ImageBackground, View } from 'react-native';
+import { ImageBackground } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { images } from '../../resources/images';
+import { colors } from '../../resources/colors';
 import styles from './Style';
 
 export default class SplashScreen extends Component {
@@ -13,7 +14,7 @@ export default class SplashScreen extends Component {
     }, 2000);
 
     return (
-      <LinearGradient colors={['#ffffff', '#8a0a0f']}>
+      <LinearGradient colors={[colors.white, colors.red]}>
         <ImageBackground
           style={styles.image}
           source={images.logo}
