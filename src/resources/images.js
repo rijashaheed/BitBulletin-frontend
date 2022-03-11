@@ -9,7 +9,7 @@ module.exports.images = {
   image4: require('../assets/image4.jpg'),
   image5: require('../assets/image5.png'),
 
-  business: require('../assets/business.jpeg'),
-  sports: require('../assets/sports.jpg'),
-  tech: require('../assets/tech.jpeg')
+  business: require('../assets/business.png'),
+  sports: require('../assets/sports.png'),
+  tech: require('../assets/tech.png')
 };
