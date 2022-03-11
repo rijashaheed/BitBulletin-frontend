@@ -10,6 +10,6 @@ module.exports.images = {
   image5: require('../assets/image5.png'),
 
   business: require('../assets/business.png'),
-  sports: require('../assets/sports.png'),
+  sports: require('../assets/sports1.png'),
   tech: require('../assets/tech.png')
 };

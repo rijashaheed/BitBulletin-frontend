@@ -14,7 +14,7 @@ export default class SplashScreen extends Component {
     }, 2000);
 
     return (
-      <LinearGradient colors={[colors.white, colors.red]}>
+      <LinearGradient colors={[colors.white, colors.darkGray]}>
         <ImageBackground
           style={styles.image}
           source={images.logo}
