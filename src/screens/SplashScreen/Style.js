@@ -1,23 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
+import { StyleSheet } from 'react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
-
-  text: {
-    textAlign: 'center',
-  },
-
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   image: {
-    flex: 1,
-    width: RFPercentage(65),
+    width: wp('100%'),
+    height: hp('100%'),
   },
 });

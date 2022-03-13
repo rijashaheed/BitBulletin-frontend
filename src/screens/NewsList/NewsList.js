@@ -1,15 +1,12 @@
 import React from 'react';
-import { SafeAreaView, FlatList, Text } from 'react-native';
+import { View, SafeAreaView, FlatList, Text } from 'react-native';
 import NewsCard from './NewsCard';
 import { strings } from '../../resources/strings';
 import styles from './Style'
 
-function NewsList(props) {
-  const { route } = props;
-  const { categoryTitle } = route.params
+function NewsList() {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <Text style={styles.categoryTitle}>{categoryTitle}</Text>
+    <SafeAreaView style={{ flex: 1 }}>
       <FlatList
         data={strings.newsList.list}
         renderItem={({ item }) => <NewsCard news={item} />}

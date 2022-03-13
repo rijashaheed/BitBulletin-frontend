@@ -1,20 +1,26 @@
-import React, {Component} from 'react';
-import {Image, View} from 'react-native';
-import {images} from '../../resources/images';
+import React, { Component } from 'react';
+import { ImageBackground } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { images } from '../../resources/images';
+import { colors } from '../../resources/colors';
 import styles from './Style';
 
 export default class SplashScreen extends Component {
   render() {
-    const {navigation} = this.props;
+    const { navigation } = this.props;
 
     setTimeout(() => {
       navigation.replace('HomeScreen');
     }, 2000);
 
     return (
-      <View style={styles.container}>
-        <Image style={styles.image} resizeMode="contain" source={images.logo} />
-      </View>
+      <LinearGradient colors={[colors.white, colors.darkGray]}>
+        <ImageBackground
+          style={styles.image}
+          source={images.logo}
+          resizeMode="contain"
+        />
+      </LinearGradient>
     );
   }
 }
