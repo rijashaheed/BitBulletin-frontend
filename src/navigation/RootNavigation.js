@@ -1,4 +1,5 @@
 import React from 'react';
+import { View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
@@ -16,6 +17,10 @@ const screenOptions = {
 export default function RootNavigation() {
   return (
     <NavigationContainer>
+
+      <StatusBar animated={true}
+        backgroundColor={colors.red} />
+
       <Stack.Navigator
         screenOptions={screenOptions}
         initialRouteName="SplashScreen">
