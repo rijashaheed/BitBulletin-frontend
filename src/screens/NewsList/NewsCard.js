@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { View, ImageBackground, Text, TouchableOpacity } from 'react-native';
+import { View, ImageBackground, Text, TouchableOpacity, StatusBar } from 'react-native';
 import style from './Style';
 import { colors } from '../../resources/colors';
 
