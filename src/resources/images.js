@@ -1,7 +1,6 @@
 module.exports.images = {
   logo: require('../assets/logo.png'),
   news: require('../assets/news.jpg'),
-  coronavirus: require('../assets/coronavirus.jpg'),
 
   image1: require('../assets/image1.jpg'),
   image2: require('../assets/image2.jpg'),
