@@ -5,6 +5,7 @@ import { colors } from '../../resources/colors';
 export default StyleSheet.create({
   safeArea: {
     flex: 1,
+    backgroundColor: colors.white,
   },
 
   searchContainer: {
