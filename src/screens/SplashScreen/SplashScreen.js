@@ -9,9 +9,9 @@ export default class SplashScreen extends Component {
   render() {
     const { navigation } = this.props;
 
-    // setTimeout(() => {
-    //   navigation.replace('HomeScreen');
-    // }, 2000);
+    setTimeout(() => {
+      navigation.replace('HomeScreen');
+    }, 2000);
 
     return (
       <View style={styles.safeArea}>
