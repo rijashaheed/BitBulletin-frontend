@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ImageBackground } from 'react-native';
+import { View, ImageBackground, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { images } from '../../resources/images';
 import { colors } from '../../resources/colors';
@@ -9,18 +9,24 @@ export default class SplashScreen extends Component {
   render() {
     const { navigation } = this.props;
 
-    setTimeout(() => {
-      navigation.replace('HomeScreen');
-    }, 2000);
+    // setTimeout(() => {
+    //   navigation.replace('HomeScreen');
+    // }, 2000);
 
     return (
-      <LinearGradient colors={[colors.white, colors.darkGray]}>
-        <ImageBackground
-          style={styles.image}
-          source={images.logo}
-          resizeMode="contain"
-        />
-      </LinearGradient>
+      <View style={styles.safeArea}>
+        <LinearGradient colors={[colors.white, colors.darkGray]}>
+          <ImageBackground
+            style={styles.image}
+            source={images.logo}
+            resizeMode="contain"
+          >
+            <Text style={styles.text}>
+              Different News - Single Platform
+            </Text>
+          </ImageBackground>
+        </LinearGradient>
+      </View>
     );
   }
 }
