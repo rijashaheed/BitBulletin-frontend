@@ -3,9 +3,16 @@ import { useNavigation } from '@react-navigation/native';
 import { View, ImageBackground, Text, TouchableOpacity, StatusBar } from 'react-native';
 import style from './Style';
 import { colors } from '../../resources/colors';
+import {firebase} from '../../Firebase/config';
+import {useEffect} from 'react';
 
 function NewsCard({ news }) {
   const navigation = useNavigation();
+  const server = firebase.firestore().collection("Category");
+  useEffect(() => {
+    // console.log("Current data: ", server.data());
+    console.log("hello world");
+  },[])
   return (
     <TouchableOpacity
       key={news.id}
