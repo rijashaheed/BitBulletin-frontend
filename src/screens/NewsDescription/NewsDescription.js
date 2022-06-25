@@ -6,12 +6,12 @@ import styles from './Style';
 
 const NewsDescription = (props) => {
   const { route } = props;
-  const { newsTitle, newsTime, newsAuthor, newsSource, newsImage, newsContent } = route.params
+  const { newsTitle, newsTime, newsAuthor, newsSource, newsImage, newsSummary } = route.params
   return (
     <ScrollView>
       <Image
         style={styles.newsImage}
-        source={newsImage}
+        source={{uri: newsImage}}
       />
       <View style={styles.newsBox}>
         <Text style={[styles.newsTitle]}>{newsTitle}</Text>
@@ -24,7 +24,7 @@ const NewsDescription = (props) => {
           <Text style={[styles.newsTime]}>Updated {newsTime} ago</Text>
         </View>
         <View style={styles.contentBox}>
-          <Text style={[styles.newsContent]}>{newsContent}</Text>
+          <Text style={[styles.newsContent]}>{newsSummary}</Text>
         </View>
       </View>
       <View style={[styles.button]}>

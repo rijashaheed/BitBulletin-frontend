@@ -8,35 +8,24 @@ import firestore from '@react-native-firebase/firestore';
 
 function NewsList({route}) {
   const category = route.params.categoryTitle ;
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [image, setImage] = useState();
-  const [time, setTime] = useState('');
-  const [date, setDate] = useState('');
-  const [summary, setSummary] = useState('');
-  const [source, setSource] = useState('');
+  const [dataList, setDataList] = useState([]);
 
   useEffect(() => {
     firestore().collection('Category').doc('uLzkXth3HoYSWg9qF8VR').collection(category).get().then(snapshot => {
+      let data = [];
         // console.log('Total users: ', snapshot.size);
         snapshot.forEach(doc => {
-          setTitle(doc.data().title)
-          setAuthor(doc.data().author)
-          setDate(doc.data().data)
-          setTime(doc.data().time)
-          setImage(doc.data().image)
-          setSummary(doc.data().summary)
-          setSource(doc.data().source)
+          data.push({id: doc.id, title:doc.data().title, author: doc.data().author, date:doc.data().date, time: doc.data().time
+          , image: doc.data().image, summary: doc.data().summary, source: doc.data().source  })
           // console.log('User ID: ', doc.id, doc.data());
         });
+        setDataList(data);
       });
   }, []);
-
-  let data = [{title:title, author:author, date:date, time:time, summary:summary, image:image, source:source}]
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <FlatList
-        data= {data}
+        data= {dataList}
         renderItem={({ item }) => <NewsCard news={item} />}
         keyExtractor={item => item.id}
       />

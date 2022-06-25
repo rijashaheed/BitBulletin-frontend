@@ -8,17 +8,17 @@ import { Searchbar } from 'react-native-paper';
 const data = [
   {
     id: 0,
-    title: 'sports',
+    title: 'Sports',
     icon: images.sports,
   },
   {
     id: 1,
-    title: 'business',
+    title: 'Business',
     icon: images.business,
   },
   {
     id: 2,
-    title: 'tech',
+    title: 'Tech',
     icon: images.tech,
   },
 ]

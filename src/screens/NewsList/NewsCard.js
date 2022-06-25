@@ -37,7 +37,7 @@ function NewsCard({news}) {
         <View style={style.container}>
           <ImageBackground
             style={style.coverImage}
-            source={news.image}
+            source={{uri: news.image}}
             // eslint-disable-next-line react-native/no-inline-styles
             imageStyle={{opacity: 0.9, backgroundColor: colors.red}}>
             <View style={style.textView}>
