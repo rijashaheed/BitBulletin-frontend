@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "623674819637",
+    "project_id": "bitbulletin-6052e",
+    "storage_bucket": "bitbulletin-6052e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623674819637:android:5ef6ef9904e19bef29dd7c",
+        "android_client_info": {
+          "package_name": "com.bitbulletin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623674819637-9tccdqtfgpf2pek1to3nd8iv5i98oivp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc9y9gLDTXRjWXaZlZE9Jp2-zIhYAeoKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623674819637-9tccdqtfgpf2pek1to3nd8iv5i98oivp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
