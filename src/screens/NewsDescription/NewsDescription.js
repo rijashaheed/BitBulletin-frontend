@@ -6,8 +6,15 @@ import styles from './Style';
 
 const NewsDescription = props => {
   const {route} = props;
-  const {newsTitle, newsTime, newsAuthor, newsSource, newsImage, newsSummary} =
-    route.params;
+  const {
+    newsTitle,
+    newsTime,
+    newsAuthor,
+    newsSource,
+    newsImage,
+    newsSummary,
+    newsLink,
+  } = route.params;
   return (
     <ScrollView>
       <Image style={styles.newsImage} source={{uri: newsImage}} />
@@ -29,7 +36,7 @@ const NewsDescription = props => {
         <Button
           title="Read Full Article"
           color={colors.red}
-          onPress={() => Linking.openURL('https://www.dawn.com/')}
+          onPress={() => Linking.openURL(newsLink)}
         />
       </View>
     </ScrollView>

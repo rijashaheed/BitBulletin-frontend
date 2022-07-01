@@ -30,6 +30,7 @@ function NewsCard({news}) {
           newsSource: news.source,
           newsImage: news.image,
           newsSummary: news.summary,
+          newsLink: news.link,
         })
       }>
       <View style={style.overlay}>

@@ -19,18 +19,20 @@ function NewsList({route}) {
       .then(snapshot => {
         let data = [];
         snapshot.forEach(doc => {
-          // now = moment(doc.data().time).fromNow();
-          // // let duration = moment.duration(now.diff(doc.data().time))
+          // console.log('ww:', moment.utc(doc.data().time).fromNow());
+          // now = moment(doc.data().time.seconds).fromNow();
+          // let duration = moment.duration(now.diff(doc.data().time))
           // console.log('hh:', now);
           data.push({
             id: doc.id,
             title: doc.data().title,
             author: doc.data().author,
             date: doc.data().date,
-            time: moment(doc.data().time).fromNow(),
+            // time: moment(doc.data().time.seconds).fromNow(),
             image: doc.data().image,
             summary: doc.data().summary,
             source: doc.data().source,
+            link: doc.data().link,
           });
         });
         setDataList(data);
