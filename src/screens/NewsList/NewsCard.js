@@ -42,7 +42,12 @@ function NewsCard({news}) {
             imageStyle={{opacity: 0.9, backgroundColor: colors.red}}>
             <View style={style.textView}>
               <Text style={style.imageTextHead}>{news.title}</Text>
-              <Text style={style.imageTextTime}>Published {news.time}</Text>
+              <Text style={style.imageTextTime}>
+                Updated on{' '}
+                {new Date(
+                  news?.time?.seconds * 1000 || news?.time?._seconds * 1000,
+                ).toDateString()}
+              </Text>
             </View>
           </ImageBackground>
         </View>

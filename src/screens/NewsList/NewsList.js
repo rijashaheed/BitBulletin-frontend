@@ -4,7 +4,6 @@ import NewsCard from './NewsCard';
 import {strings} from '../../resources/strings';
 import styles from './Style';
 import firestore from '@react-native-firebase/firestore';
-import moment from 'moment';
 
 function NewsList({route}) {
   const category = route.params.categoryTitle;
@@ -19,16 +18,12 @@ function NewsList({route}) {
       .then(snapshot => {
         let data = [];
         snapshot.forEach(doc => {
-          // console.log('ww:', moment.utc(doc.data().time).fromNow());
-          // now = moment(doc.data().time.seconds).fromNow();
-          // let duration = moment.duration(now.diff(doc.data().time))
-          // console.log('hh:', now);
           data.push({
             id: doc.id,
             title: doc.data().title,
             author: doc.data().author,
             date: doc.data().date,
-            // time: moment(doc.data().time.seconds).fromNow(),
+            time: doc.data().time,
             image: doc.data().image,
             summary: doc.data().summary,
             source: doc.data().source,
