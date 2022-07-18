@@ -21,7 +21,7 @@ const NewsDescription = (props) => {
             <Text style={[styles.text]}>|</Text>
             <Text style={[styles.text]}>{newsSource}</Text>
           </View>
-          <Text style={[styles.newsTime]}>Updated {newsTime} ago</Text>
+          <Text style={[styles.newsTime]}>Updated {new Date(newsTime?.seconds*1000||newsTime?._seconds*1000).toDateString()} ago</Text>
         </View>
         <View style={styles.contentBox}>
           <Text style={[styles.newsContent]}>{newsSummary}</Text>

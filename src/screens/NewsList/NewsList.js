@@ -31,6 +31,7 @@ function NewsList({route}) {
           });
           // console.log('User ID: ', doc.id, doc.data());
         });
+        console.log("data", data);
         setDataList(data);
       });
   }, []);
@@ -41,6 +42,19 @@ function NewsList({route}) {
         renderItem={({item}) => <NewsCard news={item} />}
         keyExtractor={item => item.id}
       />
+      <Text>hello</Text>
+      {/* {dataList.map((newsElement) => (
+        <NewsCard news={newsElement} />
+      ))} */}
+      {/* <Text>datalist{dataList.length}</Text>
+     {dataList.map((item, id) => {
+        return (
+          <NewsCard
+            news={item}
+          />
+          // <Text>hello</Text>
+        );
+      })} */}
     </SafeAreaView>
   );
 }

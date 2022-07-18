@@ -18,7 +18,6 @@ function NewsCard({news}) {
   const navigation = useNavigation();
 
   // const users = firestore().collection('Category');
-
  
   return (
     <TouchableOpacity
@@ -42,7 +41,7 @@ function NewsCard({news}) {
             imageStyle={{opacity: 0.9, backgroundColor: colors.red}}>
             <View style={style.textView}>
               <Text style={style.imageTextHead}>{news.title}</Text>
-              <Text style={style.imageTextTime}>Updated {news.time} ago</Text>
+              <Text style={style.imageTextTime}>Updated {new Date(news?.time?.seconds*1000||news?.time?._seconds*1000).toDateString()} ago</Text>
             </View>
           </ImageBackground>
         </View>
