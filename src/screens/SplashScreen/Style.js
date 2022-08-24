@@ -19,5 +19,6 @@ export default StyleSheet.create({
     marginTop: wp('125%'),
     opacity: 0.8, 
     fontStyle: 'italic',
+    paddingTop: wp('10%')
   }
 });

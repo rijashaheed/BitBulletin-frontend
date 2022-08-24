@@ -10,18 +10,10 @@ import {
 } from 'react-native';
 import style from './Style';
 import {colors} from '../../resources/colors';
-// import firestore from '@react-native-firebase/firestore';
-// import app from '../../resources/firebase';
-// import {firebase} from '../../resources/firebase';
-import firestore from '@react-native-firebase/firestore';
 
 function NewsCard({news}) {
   const navigation = useNavigation();
-  const newsSaved = useState({})
-
-  // const users = firestore().collection('Category');
   return (
-    // <Loader/>
     <View>
     <TouchableOpacity
       key={news.id}
@@ -45,7 +37,7 @@ function NewsCard({news}) {
             imageStyle={{opacity: 0.9, backgroundColor: colors.red}}>
             <View style={style.textView}>
               <Text style={style.imageTextHead}>{news.title}</Text>
-              <Text style={style.imageTextTime}>Updated {new Date(news?.time?.seconds*1000||news?.time?._seconds*1000).toDateString()} ago</Text>
+              <Text style={style.imageTextTime}>Updated on {new Date(news?.time?.seconds*1000||news?.time?._seconds*1000).toDateString()}</Text>
             </View>
 
 
