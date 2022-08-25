@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 import { images } from '../../resources/images'
 import styles from './Style'
 import { Searchbar } from 'react-native-paper';
+import LinearGradient from 'react-native-linear-gradient';
+import { colors } from '../../resources/colors';
 
 const data = [
   {
@@ -28,6 +30,7 @@ export default function HomeScreen() {
   const navigation = useNavigation();
 
   return (
+    
     <View style={styles.safeArea}>
       <View style={styles.searchContainer}>
         <View style={styles.searchInnerContainer}>
@@ -41,6 +44,7 @@ export default function HomeScreen() {
         </View>
       </View>
 
+      {/* <LinearGradient colors={["white", "#c4adc0", "#ad93a8", ]}> */}
       <ScrollView contentContainerStyle={styles.categoryContainerBox}>
         {data
           .sort((a, b) => a.title.localeCompare(b.title))
@@ -61,7 +65,9 @@ export default function HomeScreen() {
             </TouchableOpacity>
           ))}
       </ScrollView>
+      {/* </LinearGradient> */}
     </View>
+    
   )
 }
 
