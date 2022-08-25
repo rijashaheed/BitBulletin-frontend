@@ -11,11 +11,11 @@ export default class SplashScreen extends Component {
 
     setTimeout(() => {
       navigation.replace('HomeScreen');
-    }, 2000);
+    }, 5000);
 
     return (
       <View style={styles.safeArea}>
-        <LinearGradient colors={[colors.white, colors.darkGray]}>
+        <LinearGradient colors={["white", "#c4adc0", "#ad93a8",]}>
           <ImageBackground
             style={styles.image}
             source={images.logo}
